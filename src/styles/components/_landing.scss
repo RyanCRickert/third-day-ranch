@@ -1,0 +1,100 @@
+.landing {
+  align-items: center;
+  background: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.landing-header {
+  background: none;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.landing-header__content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 8rem;
+  justify-content: space-between;
+  padding: $s-size 0;
+}
+
+.landing-header__title {
+  color: $gray;
+  font-size: 1.4rem;
+  text-decoration: none;
+  
+  h1 {
+    font-weight: bold;
+    margin: 0;
+    transition: all 1.0s ease;
+  }
+  :hover {
+    color: $light-blue;
+    transition: all 1.0s ease;
+  }
+
+  @media (max-width: 66.5rem) {
+    font-size: 0.8rem;
+  }
+}
+
+a:hover {
+  color: $light-blue;
+}
+
+.landing-header_shrink {
+  height: 6.2rem;
+}
+
+.landing-header__link {
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: $s-size;
+  transition: all 1.0s ease;
+
+  :hover {
+    color: $magenta;
+    transition: all 1.0s ease;
+  }
+
+  @media (max-width: 66.5rem) {
+    color: $gray;
+    font-size: 1.8rem;
+  }
+}
+
+.landing-header__buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.landing-header-shrink {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+}
+
+.landing-header__dropdown {
+  background-color: $gray;
+  color: white;
+  height: 4rem;
+  font-size: 1.4rem;
+}
+
+.landing__image {
+  user-select: none;
+
+  @media (max-width: 800px) {
+    width: 90%;
+  }
+}

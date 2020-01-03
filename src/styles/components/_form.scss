@@ -1,0 +1,69 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin: $m-size 0;
+  }
+}
+
+.form__error {
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+}
+
+.form__label {
+  font-size: 2rem;
+  z-index: 2000;
+}
+
+.form__file-input {
+  font-size: 1.4rem;
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: 1.5rem;
+  }
+}
+
+.form__text {
+  font-size: 1rem;
+  text-align: left;
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: 1rem;
+  }
+}
+
+.form__button {
+  font-size: 2rem;
+  transition: all 0.5s ease;
+  width: 12.8rem;
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: 1.8rem;
+    width: 9.1rem;
+  }
+}
+
+.form__button.disabled {
+  transition: all 0.5s ease;
+  width: 37.9rem;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 25.8rem;
+  }
+}
+
+.form__name {
+  font-size: 1.6rem;
+  height: 3rem;
+}
+
+.form__email {
+  font-size: 1.6rem;
+  height: 3rem;
+}
+
+.form__message {
+  font-size:  1.6rem;
+  height: 20rem;
+}
