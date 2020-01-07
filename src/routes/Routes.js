@@ -1,45 +1,18 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
-import matchPath from 'react-router-dom/matchPath';
+import { matchPath } from 'react-router-dom';
 import { handleEnterAnimation, handleExitAnimation } from './Route_Animations';
 
-import About from "../components/About";
+import Header from "../components/Header";
+import HomePage from "../components/HomePage";
 import NotFoundPage from "../components/NotFoundPage";
-import LandingPage from "../components/LandingPage";
-import Careers from "../components/Careers";
-import Innovative from "../components/Innovative";
-import Custom from "../components/Custom";
 
 const routes = [
   {
-    component: LandingPage,
+    component: HomePage,
     key: 'home',
     path: '/',
-    exact: true
-  },
-  {
-    component: About,
-    key: 'about',
-    path: '/about',
-    exact: true
-  },
-  {
-    component: Custom,
-    key: 'custom',
-    path: '/news',
-    exact: true
-  },
-  {
-    component: Careers,
-    key: 'contact',
-    path: '/contact',
-    exact: true
-  },
-  {
-    component: Innovative,
-    key: 'innovative',
-    path: '/technology',
     exact: true
   }
 ]
@@ -63,6 +36,7 @@ class Routes extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <Route render={({ location }) => {
           if (!filterRoutes(location).length) {
             return (
@@ -70,12 +44,6 @@ class Routes extends React.Component {
                 <Transition
                   key="404"
                   timeout={0}
-                  onEnter={() => console.log('notFound enter')}
-                  onEntering={() => console.log('notFound entering')}
-                  onEntered={() => console.log('notFound entered')}
-                  onExit={() => console.log('notFound exit')}
-                  onExiting={() => console.log('notFound exiting')}
-                  onExited={() => console.log('notFound exited')}
                 >
                   <NotFoundPage location={location} />
                 </Transition>

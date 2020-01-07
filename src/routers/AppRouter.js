@@ -1,11 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import {Router, Route, Switch,} from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import createHistory from 'history/createBrowserHistory';
+import {Router, Switch} from "react-router-dom";
+import { createBrowserHistory as createHistory } from 'history';
 
-import About from "../components/About";
-import NotFoundPage from "../components/NotFoundPage";
 import Routes from "../routes/Routes";
 
 export const history = createHistory();
