@@ -1,5 +1,5 @@
 import React from "react";
-import {Router, Switch} from "react-router-dom";
+import { Router, Switch } from "react-router-dom";
 import { createBrowserHistory as createHistory } from 'history';
 
 import Routes from "../routes/Routes";

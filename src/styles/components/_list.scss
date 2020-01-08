@@ -1,12 +1,3 @@
-.list-header {
-  background: $off-white;
-  border: 1px solid darken($off-white, 10%);
-  color: $gray;
-  display: flex;
-  justify-content: space-between;
-  padding: $s-size $m-size;
-}
-
 .list-body {
   margin-bottom: $m-size;
 
@@ -17,10 +8,10 @@
 
 .list-item {
   border: 1px solid darken($off-white, 10%);
-  border-top: none;
   color: $dark-gray;
   display: flex;
   flex-direction: column;
+  margin-bottom: $s-size;
   padding: $s-size;
   text-decoration: none;
   transition: background 0.3s ease;
@@ -30,8 +21,8 @@
 
   @media (min-width: $desktop-breakpoint) {
     align-items: center;
-    flex-direction: row;
     justify-content: space-between;
+    margin-bottom: $m-size;
     padding: $m-size;
   }
 }

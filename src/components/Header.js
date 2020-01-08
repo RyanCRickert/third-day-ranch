@@ -42,19 +42,19 @@ export default class Header extends React.Component {
           <div className="header__content">
             <div className="header__buttons">
               <Link to="/" className="header__link" style={{ textDecoration: 'none' }}>
-                HOME
+                Home
               </Link>
-              <Link to="/about" className="header__link" style={{ textDecoration: 'none' }}>
-                ABOUT
+              <Link to="/who" className="header__link" style={{ textDecoration: 'none' }}>
+                Who We Are
               </Link>
               <div>
                 Third Day Farm and Ranch
               </div>
-              <Link to="/technology" className="header__link" style={{ textDecoration: 'none' }}>
-                TECHNOLOGY
+              <Link to="/for-sale" className="header__link" style={{ textDecoration: 'none' }}>
+                For Sale
               </Link>
               <Link to="/contact" className="header__link" style={{ textDecoration: 'none' }}>
-                CONTACT
+                Contact
               </Link>
             </div>
           </div>

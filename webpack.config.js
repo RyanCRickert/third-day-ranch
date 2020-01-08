@@ -14,23 +14,21 @@ module.exports = (env) => {
     const isProduction = env === "production";
 
     return {
-        entry: [
-            "babel-polyfill",
-            "./src/app.js"
-        ],
+        watch: true,
+        entry: "./src/app.js",
         output: {
-            path: path.join(__dirname, "public", "dist"),
+            path: path.resolve(__dirname, "public", "dist"),
             filename: "bundle.js"
         },
         module: {
             rules: [{
-                loader: "babel-loader",
                 test: /\.js$/,
+                loader: "babel-loader",
                 exclude: /node_modules/
             }, {
                 test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    isProduction ? MiniCssExtractPlugin.loader : "style-loader",
                     {
                         loader: "css-loader",
                         options: {
@@ -48,6 +46,8 @@ module.exports = (env) => {
             ]
         },
         plugins: [
+            new webpack.HotModuleReplacementPlugin(),
+            new webpack.NamedModulesPlugin(),
             new MiniCssExtractPlugin({
                 filename: "styles.css"
             }),
@@ -64,8 +64,9 @@ module.exports = (env) => {
         devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
             contentBase: path.join(__dirname, "public"),
-            historyApiFallback: true,
             publicPath: "/dist/",
+            hot: true,
+            historyApiFallback: true,
             proxy: {
                 "/api": "http://localhost:8081"
             }
