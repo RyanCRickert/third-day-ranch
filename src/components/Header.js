@@ -48,7 +48,7 @@ export default class Header extends React.Component {
                 Who We Are
               </Link>
               <div>
-                Third Day Farm and Ranch
+                <img className="header__image" src="/images/logo.png" />
               </div>
               <Link to="/for-sale" className="header__link" style={{ textDecoration: 'none' }}>
                 For Sale
