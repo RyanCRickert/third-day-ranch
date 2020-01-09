@@ -37,18 +37,24 @@
   word-break: break-all;
 }
 
-.modal-thank {
+.modal-picture {
   background: $gray;
   border-radius: 0.5rem;
   color: $off-white;
-  max-width: 60rem;
   outline: none;
   padding: $m-size;
   text-align: center;
 }
 
-.modal-thank__body {
+.modal-picture__body {
+  height: 80vh;
   margin-bottom: $l-size;
+  width: 80vw;
+}
+
+.modal-picture__image {
+  height: 80vh;
+  width: 80vw;
 }
 
 .modal-remove {
