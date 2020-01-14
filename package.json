@@ -31,7 +31,6 @@
     "commander": "^2.18.0",
     "concurrently": "^4.0.1",
     "express": "^4.16.3",
-    "firebase": "^5.5.2",
     "formidable": "^1.2.1",
     "gsap": "^2.0.2",
     "history": "^4.7.2",
