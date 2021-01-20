@@ -32,7 +32,7 @@
     "concurrently": "^4.0.1",
     "express": "^4.16.3",
     "formidable": "^1.2.1",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "history": "^4.7.2",
     "mini-css-extract-plugin": "^0.4.0",
     "moment": "^2.21.0",
